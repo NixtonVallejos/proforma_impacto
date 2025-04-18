@@ -6,10 +6,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<_HomeOption> options = [
-      _HomeOption("Clientes", Icons.people, "/clientes"),
-      _HomeOption("Inventario", Icons.inventory, "/inventario"),
-      _HomeOption("Proformas", Icons.description, "/proformas"),
-      _HomeOption("Reportes", Icons.bar_chart, "/reportes"),
+      _HomeOption("Clientes", Icons.people, "/customers"),
+      _HomeOption("Inventario", Icons.inventory, "/inventory"),
+      _HomeOption("Proformas", Icons.description, "/stimates"),
+      _HomeOption("Reportes", Icons.bar_chart, "/reports"),
     ];
 
     return Scaffold(

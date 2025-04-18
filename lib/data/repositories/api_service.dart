@@ -19,4 +19,20 @@ class ApiService {
     }
     return null;
   }
+
+  Future<List<dynamic>> get(String endpoint, String token) async {
+    try {
+      final response = await _dio.get(
+        "$baseUrl$endpoint",
+        options: Options(headers: {"Authorization": "Bearer $token"}),
+      );
+
+      if (response.statusCode == 200) {
+        return response.data;
+      }
+    } catch (e) {
+      throw Exception("Error fetching data: $e");
+    }
+    return [];
+  }
 }
